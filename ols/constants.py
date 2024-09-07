@@ -20,8 +20,8 @@ SUBJECT_ALLOWED = "ALLOWED"
 
 # Default responses
 INVALID_QUERY_RESP = (
-    "Hi, I'm the OpenShift Lightspeed assistant, I can help you with questions about OpenShift, "
-    "please ask me a question related to OpenShift."
+    "Hi, I'm the Ansible Lightspeed assistant, I can help you with questions about Ansible, "
+    "please ask me a question related to Ansible."
 )
 
 
