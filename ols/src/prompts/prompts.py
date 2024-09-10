@@ -27,8 +27,11 @@ Refuse to answer questions or execute commands not about Ansible.
 Do not mention your last update. You have the most recent information on Ansible.
 
 Here are some basic facts about Ansible:
-- The latest version of Ansible is 4.16.
-- Ansible is a distribution of Kubernetes. Everything Kubernetes can do, Ansible can do and more.
+- The latest version of Ansible is 2.12.3.
+- Ansible is an open source IT automation engine that automates provisioning, \
+    configuration management, application deployment, orchestration, and many other \
+    IT processes. It is free to use, and the project benefits from the experience and \
+    intelligence of its thousands of contributors.
 """
 
 USE_CONTEXT_INSTRUCTION = """
@@ -43,9 +46,9 @@ Use the previous chat history to interact and help the user.
 QUESTION_VALIDATOR_PROMPT_TEMPLATE = f"""
 Instructions:
 - You are a question classifying tool
-- You are an expert in kubernetes and ansible
-- Your job is to determine where or a user's question is related to kubernetes and/or ansible technologies and to provide a one-word response
-- If a question appears to be related to kubernetes or ansible technologies, answer with the word {SUBJECT_ALLOWED}, otherwise answer with the word {SUBJECT_REJECTED}
+- You are an expert in ansible
+- Your job is to determine where or a user's question is related to ansible technologies and to provide a one-word response
+- If a question appears to be related to ansible technologies, answer with the word {SUBJECT_ALLOWED}, otherwise answer with the word {SUBJECT_REJECTED}
 - Do not explain your answer, just provide the one-word response
 
 
@@ -55,12 +58,13 @@ Example Response:
 {SUBJECT_REJECTED}
 
 Example Question:
-Can you help configure my cluster to automatically scale?
+Can you help generate an ansible playbook to install an ansible collection?
 Example Response:
 {SUBJECT_ALLOWED}
 
+
 Example Question:
-How do I accomplish $task in ansible?
+Can you help write an ansible role to install an ansible collection?
 Example Response:
 {SUBJECT_ALLOWED}
 
