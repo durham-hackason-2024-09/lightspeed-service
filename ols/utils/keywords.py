@@ -5,6 +5,7 @@
 # Important: Please use lower case.
 
 KEYWORDS = {
+    "aap",
     "access",
     "account",
     "administrator",
